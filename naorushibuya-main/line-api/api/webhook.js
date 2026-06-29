@@ -1,5 +1,5 @@
 /**
- * NAORU整体 渋谷院 LINE Webhook
+ * NAORU整体 博多院 LINE Webhook
  *
  * リッチメニュー構成（LINE Official Account Manager で設定済み）:
  *   A: 簡単AI診断       → テキスト "AI問診" を送信
@@ -45,8 +45,8 @@ const config = {
   channelSecret:      process.env.CHANNEL_SECRET,
 };
 
-const RESERVE_URL = 'https://sv1.sattou.net/naoru/reserve/shibuya.hp';
-const TEL         = '070-8519-6347';
+const RESERVE_URL = 'https://sv1.sattou.net/naoru/reserve/hakata.hp'; // ★博多院の予約URLに差し替えてください（仮）
+const TEL         = '092-000-0000'; // ★博多院の電話番号に差し替えてください（仮）
 
 const client = new line.Client(config);
 const app    = express();
@@ -178,7 +178,7 @@ async function handleEvent(event) {
     return null;
     // return reply(
     //   event.replyToken,
-    //   `${displayName}さん、NAORU整体 渋谷院です。\n友だち追加ありがとうございます！\n\n下のメニューから「簡単AI診断」を選ぶと、症状の分析ができます。\nお悩みをそのままメッセージで送っていただいても大丈夫です。\n\n▼初回予約（3,500円）\n${RESERVE_URL}`
+    //   `${displayName}さん、NAORU整体 博多院です。\n友だち追加ありがとうございます！\n\n下のメニューから「簡単AI診断」を選ぶと、症状の分析ができます。\nお悩みをそのままメッセージで送っていただいても大丈夫です。\n\n▼初回予約（3,500円）\n${RESERVE_URL}`
     // );
   }
 
