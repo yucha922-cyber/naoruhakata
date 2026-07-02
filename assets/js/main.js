@@ -258,7 +258,7 @@
 
   // ---------- 8. LINE friend-add link injection ----------
   // LINE友達追加URLをここで一括管理。全てのLINEリンク(data-line-link)がこのURLに設定されます。
-  const LINE_FRIEND_URL = 'https://lin.ee/wi8vk5O'; // NAORU整体 博多院 LINE公式アカウント（友だち追加）
+  const LINE_FRIEND_URL = 'https://lin.ee/UzULuht'; // NAORU整体 博多院 LINE公式アカウント（友だち追加）
   document.querySelectorAll('[data-line-link]').forEach(function (el) {
     el.setAttribute('href', LINE_FRIEND_URL);
   });
